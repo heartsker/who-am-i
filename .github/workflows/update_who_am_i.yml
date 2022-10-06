@@ -1,0 +1,26 @@
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update who_am_i.md
+        run: echo "# For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin\n## Reach me at @heartsker\n## Or daniel.pustotin@gmail.com" > test.md
+        
+      - name: Commit updates
+        run: |
+          if [[ "$(git status --porcelain)" != "" ]]; then
+          git config user.name heartsker
+          git config user.email heartsker@gmail.com
+          git add .
+          git commit -m "Updated who_am_i.md $(date +'at %l:%M %p on %v')"
+          git push
+          fi
