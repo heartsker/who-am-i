@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update who_am_i.md
-        run: echo "# For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin\n## Reach me at @heartsker\n## Or daniel.pustotin@gmail.com" > test.md
+        run: echo "# For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin\n## Reach me at @heartsker\n## Or daniel.pustotin@gmail.com" > who_am_i.md
         
       - name: Commit updates
         run: |
