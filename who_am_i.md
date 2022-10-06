@@ -1,1 +1,3 @@
-# For now ( 8:27 AM on  6-Oct-2022) I am Daniel Pustotin\n## Reach me at @heartsker\n## Or daniel.pustotin@gmail.com
+# For now ( 8:35 AM on  6-Oct-2022) I am Daniel Pustotin
+## Reach me at @heartsker
+## Or daniel.pustotin@gmail.com
