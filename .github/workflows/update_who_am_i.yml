@@ -11,9 +11,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Update who_am_i.md
-        run: echo "# For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin\n## Reach me at @heartsker\n## Or daniel.pustotin@gmail.com" > who_am_i.md
+        
+      - name: Generate content
+        run: |
+          CONTENT=$(cat << EOF
+          # For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin
+          ## Reach me at @heartsker
+          ## Or daniel.pustotin@gmail.com
+          EOF
+          )
+          echo "CONTENT<<EOF" >> $GITHUB_ENV
+          echo "$CONTENT" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        id: content
+        
+      - name: Print to who_am_i.md
+        run: echo "${{ env.CONTENT }}" > who_am_i.md
         
       - name: Commit updates
         run: |
