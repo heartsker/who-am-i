@@ -16,8 +16,8 @@ jobs:
         run: |
           CONTENT=$(cat << EOF
           # For now ($(date +'%l:%M %p on %v')) I am Daniel Pustotin
-          ## Reach me at @heartsker
-          ## Or daniel.pustotin@gmail.com
+          ## Reach me at [@heartsker](https://t.me/heartsker)
+          ## Or email me - daniel.pustotin@gmail.com
           EOF
           )
           echo "CONTENT<<EOF" >> $GITHUB_ENV
