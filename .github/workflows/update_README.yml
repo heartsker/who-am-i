@@ -34,6 +34,6 @@ jobs:
           git config user.name heartsker
           git config user.email heartsker@gmail.com
           git add .
-          git commit -m "Updated who_am_i.md $(date +'at %l:%M %p on %v')"
+          git commit -m "Updated README.md $(date +'at %l:%M %p on %v')"
           git push
           fi
